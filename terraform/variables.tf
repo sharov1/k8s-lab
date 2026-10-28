@@ -37,7 +37,7 @@ variable "worker_count" {
 variable "ssh_public_key_path" {
   description = "Путь к публичному SSH-ключу на локальной машине"
   type        = string
-  default     = "~/.ssh/k8s-lab.pub"
+  default     = "~/.ssh/k8s-learning.pub"
 }
 
 variable "vpc_cidr" {
@@ -50,4 +50,10 @@ variable "public_subnet_cidr" {
   description = "Диапазон адресов публичной подсети"
   type        = string
   default     = "10.0.1.0/24"
+}
+
+variable "root_volume_size" {
+  description = "Размер root-диска нод, ГБ"
+  type        = number
+  default     = 20
 }
