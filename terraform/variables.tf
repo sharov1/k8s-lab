@@ -1,0 +1,41 @@
+variable "project" {
+  description = "Имя проекта, используется в тегах и именах ресурсов"
+  type        = string
+  default     = "k8s-lab"
+}
+
+variable "region" {
+  description = "Регион AWS"
+  type        = string
+  default     = "eu-central-1"
+}
+
+variable "availability_zone" {
+  description = "AZ, в которой живут все ноды"
+  type        = string
+  default     = "eu-central-1a"
+}
+
+variable "control_plane_instance_type" {
+  description = "Тип инстанса для control plane (On-Demand)"
+  type        = string
+  default     = "t3.small"
+}
+
+variable "worker_instance_type" {
+  description = "Тип инстанса для воркеров (Spot)"
+  type        = string
+  default     = "t3.small"
+}
+
+variable "worker_count" {
+  description = "Количество воркер-нод"
+  type        = number
+  default     = 2
+}
+
+variable "ssh_public_key_path" {
+  description = "Путь к публичному SSH-ключу на локальной машине"
+  type        = string
+  default     = "~/.ssh/k8s-lab.pub"
+}
