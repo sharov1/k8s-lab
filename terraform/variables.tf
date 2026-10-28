@@ -39,3 +39,15 @@ variable "ssh_public_key_path" {
   type        = string
   default     = "~/.ssh/k8s-lab.pub"
 }
+
+variable "vpc_cidr" {
+  description = "Диапазон адресов VPC"
+  type        = string
+  default     = "10.0.0.0/16"
+}
+
+variable "public_subnet_cidr" {
+  description = "Диапазон адресов публичной подсети"
+  type        = string
+  default     = "10.0.1.0/24"
+}

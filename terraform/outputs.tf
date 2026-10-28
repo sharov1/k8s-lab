@@ -13,3 +13,15 @@ output "ubuntu_ami_id" {
   value       = data.aws_ssm_parameter.ubuntu_ami.value
   sensitive   = true
 }
+
+output "vpc_id" {
+  value = aws_vpc.main.id
+}
+
+output "public_subnet_id" {
+  value = aws_subnet.public.id
+}
+
+output "k8s_nodes_sg_id" {
+  value = aws_security_group.k8s_nodes.id
+}
