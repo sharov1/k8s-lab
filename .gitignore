@@ -12,3 +12,8 @@ crash.log
 
 kubeconfig
 admin.conf
+
+# Kubespray: генерируемый инвентарь и секреты
+kubespray/inventory/*/hosts.yaml
+kubespray/inventory/*/artifacts/
+kubespray/inventory/*/credentials/
