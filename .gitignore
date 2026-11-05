@@ -9,6 +9,7 @@
 .envrc
 
 crash.log
+*.log
 
 kubeconfig
 admin.conf
