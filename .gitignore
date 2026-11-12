@@ -14,6 +14,9 @@ crash.log
 kubeconfig
 admin.conf
 
+manifests/
+
+
 # Kubespray: генерируемый инвентарь и секреты
 kubespray/inventory/*/hosts.yaml
 kubespray/inventory/*/artifacts/
